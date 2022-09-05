@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --color1: hsl(225, 100%, 94%);
+  --color2: hsl(245, 75%, 52%);
+  --color3: hsl(225, 100%, 98%);
+  --color4: hsl(224, 23%, 55%);
+  --color5: hsl(223, 47%, 23%);
+  --font: "Red Hat Display", sans-serif;
+  --weight1: 500;
+  --weight2: 700;
+  --weight3: 900;
+}
+body {
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: var(--font);
+}
+p {
+  font-size: 16px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-container {
+  flex-basis: 27%;
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px var(--color1);
+  text-align: center;
+}
+.top {
+  flex-basis: 40%;
+  background-size: cover;
+}
+.bottom {
+  flex-basis: 60%;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  color: var(--color5);
+  font-weight: var(--weight3);
+  margin-bottom: 0;
+}
+.main-para {
+  color: var(--color4);
+  font-weight: var(--weight1);
+}
+.music-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  background-color: var(--color3);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content p {
+  margin: 0;
+  line-height: 26px;
+}
+
+.content img {
+  height: 45px;
+  padding-right: 20px;
+}
+
+.music-container .link {
+  text-decoration: underline;
+  color: var(--color2);
+  font-size: 14px;
+  font-weight: var(--weight3);
+  cursor: pointer;
+}
+.link:hover {
+  color: var(--color4);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.buttons button {
+  flex-basis: 100%;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+.buttons button:focus {
+  outline: none;
+  border: none;
+}
+.buttons .btn1 {
+  background-color: var(--color2);
+  color: var(--color1);
+  margin-bottom: 15px;
+  box-shadow: 0px 5px 15px var(--color4);
+  font-weight: var(--weight2);
+  z-index: 1;
+}
+
+.btn1:hover {
+  background-color: var(--color4);
+}
+.buttons .btn2 {
+  background-color: white;
+  color: var(--color4);
+  font-weight: var(--weight3);
+  z-index: 0;
+}
+
+.btn2:hover {
+  color: var(--color5);
+}
+
+@media screen and (max-width: 1250px) {
+  .order-container {
+    flex-basis: 40%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .order-container {
+    flex-basis: 70%;
+    margin: 30px 0;
+    height: 550px;
+  }
+  .bottom {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .order-container {
+    flex-basis: 95%;
+
+    height: 600px;
+  }
+}
